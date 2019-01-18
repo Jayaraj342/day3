@@ -1,0 +1,62 @@
+CSS SELECTORS
+1) .class
+	ex: .class_name
+		All elements with class="class_name" are selected.
+		
+2) #id
+	ex: #identifier
+		Select all elements with id="identifier".
+		
+3) *
+	Selects all elements.
+	
+4) <p>
+	ex: <style>
+		 p {
+		background-color: yellow;
+			  }
+		</style>
+	selects all elements in <p>.
+		
+5) div, p	
+    ex: <style>
+		 div, p {
+		background-color: yellow;
+			  }
+		</style>
+    Selects all <div> elements and <p> elements
+	
+6) div p	
+	ex: <style>
+		 div p {
+		background-color: yellow;
+			  }
+		</style>
+	Selects all <p> elements inside <div> elements
+	
+7) div > p	
+	ex: <style>
+		 div>p {
+		background-color: yellow;
+			  }
+		</style>
+	Selects all <p> elements where the parent is a <div> element
+	
+8) div + p	
+	ex: <style>
+		 div + p {
+		background-color: yellow;
+			  }
+		</style>
+	Selects all <p> elements that are placed immediately after <div> elements
+	
+9) p ~ ul	
+	ex: <style>
+	    p ~ ul {
+		background-color: yellow;
+			  }
+		</style>
+	Selects every <ul> element that are preceded by a <p> element
+	
+10) a[href$=".pdf"]	
+	Selects every <a> element whose href attribute value ends with ".pdf"

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jjjj</title>
+	<style>
+		img{
+			position: fixed;
+			bottom: 300px;
+			right: 450px;
+			width: 300px;
+			transform: rotate(20deg);
+		}
+	</style>
+
+	<script>
+		var angle = 0;
+		var rotating = true;
+
+		function init(){
+			document.addEventListener("keyup", position_checker) 
+			setInterval(rotate, 1);
+		}
+
+
+
+		function rotate(){
+			if(rotating){
+				angle = angle + 1;
+				angle = angle % 360;
+				var our_image = document.getElementById("im");
+				our_image.style.transform = "rotate(" + angle + "deg)";
+			}
+		}
+
+		function position_checker(){
+			var our_image = document.getElementById("im")
+			if(event.key == "ArrowUp"){
+				our_image.style.bottom = "500px";
+				our_image.style.right = "450px";
+			}else if(event.key == "ArrowDown"){
+				our_image.style.bottom = "0px";
+				our_image.style.right = "450px";
+			}else if(event.key == "ArrowRight"){
+				our_image.style.bottom = "300px";
+				our_image.style.right = "0px";
+			}else if(event.key == "ArrowLeft"){
+				our_image.style.bottom = "300px";
+				our_image.style.right = "900px";
+			}else if(event.key == "s"){
+				rotating = false;
+			}else if(event.key == "o"){
+				rotating = true;
+			}
+		}
+	</script>
+</head>
+<body onload="init()">
+	<img id="im" src="C:\Users\JAYARAJ\Pictures\Screenshots\image.png" width="100" height="100" style="vertical-align:middle">
+
+</body>
+</html>
